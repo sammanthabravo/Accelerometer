@@ -1,3 +1,5 @@
+/* Samantha Bravo, Ximena Cortes y Dana Paola Valiente
+*/
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/drivers/sensor.h>
