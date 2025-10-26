@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "/home/sba/rtes/zephyr/boards/bbc/microbit_v2/Kconfig.defconfig"

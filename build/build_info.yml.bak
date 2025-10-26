@@ -1,0 +1,4 @@
+west:
+  command: /home/sba/rtes/.venv/bin/west build -b bbc_microbit_v2 . --pristine
+  topdir: /home/sba/rtes
+  version: 1.4.0

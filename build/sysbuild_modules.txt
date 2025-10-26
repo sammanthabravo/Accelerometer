@@ -1,0 +1,1 @@
+"mcuboot":"/home/sba/rtes/bootloader/mcuboot":"/home/sba/rtes/bootloader/mcuboot/boot/zephyr/sysbuild"

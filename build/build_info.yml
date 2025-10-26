@@ -1,0 +1,61 @@
+cmake:
+  application:
+    configuration-dir: '/home/sba/rtes/Accelerometer'
+    source-dir: '/home/sba/rtes/Accelerometer'
+  board:
+    name: 'bbc_microbit_v2'
+    path:
+     - '/home/sba/rtes/zephyr/boards/bbc/microbit_v2'
+    qualifiers: 'nrf52833'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/sba/rtes/zephyr/dts/bindings'
+    files:
+     - '/home/sba/rtes/zephyr/boards/bbc/microbit_v2/bbc_microbit_v2.dts'
+    include-dirs:
+     - '/home/sba/rtes/modules/hal/ambiq/dts'
+     - '/home/sba/rtes/modules/hal/atmel/include'
+     - '/home/sba/rtes/modules/hal/bouffalolab/include'
+     - '/home/sba/rtes/modules/hal/bouffalolab/include/zephyr'
+     - '/home/sba/rtes/modules/hal/gigadevice/include'
+     - '/home/sba/rtes/modules/hal/microchip/include'
+     - '/home/sba/rtes/modules/hal/microchip/dts'
+     - '/home/sba/rtes/modules/hal/nuvoton/dts'
+     - '/home/sba/rtes/modules/hal/nxp/dts'
+     - '/home/sba/rtes/modules/hal/stm32/dts'
+     - '/home/sba/rtes/modules/hal/ti/dts'
+     - '/home/sba/rtes/zephyr/include'
+     - '/home/sba/rtes/zephyr/include/zephyr'
+     - '/home/sba/rtes/zephyr/dts/common'
+     - '/home/sba/rtes/zephyr/dts/vendor'
+     - '/home/sba/rtes/zephyr/dts/rx'
+     - '/home/sba/rtes/zephyr/dts/x86'
+     - '/home/sba/rtes/zephyr/dts/xtensa'
+     - '/home/sba/rtes/zephyr/dts/sparc'
+     - '/home/sba/rtes/zephyr/dts/riscv'
+     - '/home/sba/rtes/zephyr/dts/posix'
+     - '/home/sba/rtes/zephyr/dts/arm64'
+     - '/home/sba/rtes/zephyr/dts/arm'
+     - '/home/sba/rtes/zephyr/dts/arc'
+     - '/home/sba/rtes/zephyr/dts'
+  kconfig:
+    files:
+     - '/home/sba/rtes/zephyr/boards/bbc/microbit_v2/bbc_microbit_v2_defconfig'
+     - '/home/sba/rtes/Accelerometer/prj.conf'
+    user-files:
+     - '/home/sba/rtes/Accelerometer/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/sba/zephyr-sdk-0.17.4'
+  vendor-specific:
+    nordic:
+      svdfile: '/home/sba/rtes/modules/hal/nordic/nrfx/mdk/nrf52833.svd'
+  zephyr:
+    version: '4.2.99'
+    zephyr-base: '/home/sba/rtes/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/sba/rtes/.venv/bin/west build -b bbc_microbit_v2 . --pristine'
+  topdir: '/home/sba/rtes'
+  version: '1.4.0'
