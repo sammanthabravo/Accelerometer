@@ -7,7 +7,7 @@ y mostrar una imagen de flecha de acuerdo a ella */
 #include <zephyr/drivers/sensor.h>
 #include <zephyr/display/mb_display.h>
 #include <zephyr/sys/printk.h>
-#include <math.h> //Para reaizar las operaciones
+#include <math.h> // Para reaizar las operaciones
 
 #define ACCEL_NODE DT_ALIAS(accel0)
 #define STEP_ANGLE 45
@@ -18,19 +18,19 @@ struct mb_display *disp;
 
 static const struct mb_image multi_imag[] = {
     // Flechas hacia abajo según XY
-    MB_IMAGE({0,0,1,0,0}, //bien
+    MB_IMAGE({0,0,1,0,0}, 
 	     {0,0,0,1,0},
 	     {1,1,1,1,1}, // -->
 	     {0,0,0,1,0},
 	     {0,0,1,0,0}),
     MB_IMAGE({0,0,1,1,1},
 	     {0,0,0,1,1},
-	     {0,0,1,0,1}, // intercambia esta por la 
+	     {0,0,1,0,1}, 
 	     {0,1,0,0,0},
 	     {1,0,0,0,0}),
     MB_IMAGE({0,0,1,0,0},
 	     {0,1,1,1,0},
-             {1,0,1,0,1}, //bien
+             {1,0,1,0,1},
              {0,0,1,0,0},
              {0,0,1,0,0}),
     MB_IMAGE({1,1,1,0,0},
@@ -38,7 +38,7 @@ static const struct mb_image multi_imag[] = {
 	     {1,0,1,0,0},
              {0,0,0,1,0},
              {0,0,0,0,1}),
-    MB_IMAGE({0,0,1,0,0}, //bien
+    MB_IMAGE({0,0,1,0,0},
  	     {0,1,0,0,0},
 	     {1,1,1,1,1},
 	     {0,1,0,0,0},
@@ -50,12 +50,12 @@ static const struct mb_image multi_imag[] = {
 	     {1,1,1,0,0}),
     MB_IMAGE({0,0,1,0,0},
 	     {0,0,1,0,0},
-	     {1,0,1,0,1}, // bien
+	     {1,0,1,0,1},
 	     {0,1,1,1,0},
 	     {0,0,1,0,0}),
      MB_IMAGE({1,0,0,0,0},
 	     {0,1,0,0,0},
-	     {0,0,1,0,1}, //  veremos
+	     {0,0,1,0,1},
 	     {0,0,0,1,1},
 	     {0,0,1,1,1}), 
     
@@ -93,9 +93,9 @@ void main(void) {
         double angle = atan2(Ay, Ax) * (180 / M_PI);
         if (angle < 0) angle += 360;
 
-        int part = ((int)(angle / STEP_ANGLE)) % 8; // Determina en que parte de los 45º está
+        int part = ((int)(angle / STEP_ANGLE)) % 8; // Determina en qué parte de los 45º está
 
-        if (part != last_part) {
+        if (part != last_part) { // Actualiza si cambia la orientación
             last_part = part;
 
             if (Az < -9.0) {
