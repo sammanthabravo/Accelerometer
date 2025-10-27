@@ -20,7 +20,7 @@ static const struct mb_image multi_imag[] = {
     // Flechas hacia abajo según XY
     MB_IMAGE({0,0,1,0,0}, 
 	     {0,0,0,1,0},
-	     {1,1,1,1,1}, // -->
+	     {1,1,1,1,1},
 	     {0,0,0,1,0},
 	     {0,0,1,0,0}),
     MB_IMAGE({0,0,1,1,1},
